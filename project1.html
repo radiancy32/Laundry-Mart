@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Laundry Mart </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loader">
+        <h1>Welcome to Laundry Mart</h1>
+    </div>
+    <div id="fixed-image">
+     <div id ="main">
+        <div id = "page1">
+        <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="images/logo.png"  class="d-inline-block align-top" alt="Logo">
+            | Laundry Mart
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+               </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#username">Username</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <h1 id="animated-text">Welcome to Laundry Mart</h1>
+    </header>
+
+     <!-- Hero Section -->
+     <section class="hero-section text-center py-5">
+        <div class="container">
+            <h2 class="display-4">Revitalize Your Clothes with Expert Laundry Services!</h2>
+            <p class="lead">From premium dry cleaning to swift wash and fold, we deliver care and convenience. Schedule a pickup and rediscover the freshness of your clothes today!</p>
+            <a href="#" class="btn btn-primary btn-lg">Book a service today!</a>
+        </div>
+    </section>
+
+    <section>
+        <h2>About Us</h2>
+        <p>Welcome to Laundry Mart, your premier destination for all laundry needs. We offer top-notch services to ensure your clothes are clean, fresh, and well-maintained. Our team of professionals is dedicated to providing the best care for your garments. Whether you need washing, drying, ironing, or specialized care, we have you covered. Experience the convenience and quality of our services today.</p>
+    </section>
+
+    <section class="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Washing and Drying</li>
+            <li>Ironing and Folding</li>
+            <li>Dry Cleaning</li>
+            <li>Stain Removal</li>
+            <li>Express Services</li>
+            <li>Special Garment Care</li>
+        </ul>
+    </section>
+
+    <section class="price-list">
+        <h2>Price List</h2>
+        <table>
+            <tr>
+                <th>Service</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>Washing and Drying</td>
+                <td>Rs 10.00</td>
+            </tr>
+            <tr>
+                <td>Ironing and Folding</td>
+                <td>Rs 5.00</td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="booking-services">
+        <div class="left">
+            <h2>Our Services</h2>
+            <p>Click on the "Add to Cart" button to add the services to your cart.</p>
+            <ul class="service-item">
+                <li>
+                    <img src="images/dry-cleaning-icon.png" alt="Dry Cleaning">
+                    <span>Dry Cleaning</span> - ₹200.00
+                    <button onclick="addItem('Dry Cleaning', 200)">Add Item</button>
+                    <button onclick="removeItem('Dry Cleaning', 200)">Remove Item</button>
+                </li>
+                <li>
+                    <img src="images/wash-fold-icon.png" alt="Wash & Fold">
+                    <span>Wash & Fold</span> - ₹100.00
+                    <button onclick="addItem('Wash & Fold', 100)">Add Item</button>
+                    <button onclick="removeItem('Wash & Fold', 100)">Remove Item</button>
+                </li>
+                <li>
+                    <img src="images/ironing-icon.png" alt="Ironing">
+                    <span>Ironing</span> - ₹30.00
+                    <button onclick="addItem('Ironing', 30)">Add Item</button>
+                    <button onclick="removeItem('Ironing', 30)">Remove Item</button>
+                </li>
+                <li>
+                    <img src="stain-removal-icon.png" alt="Stain Removal">
+                    <span>Stain Removal</span> - ₹499.00
+                    <button onclick="addItem('Stain Removal', 499)">Add Item</button>
+                    <button onclick="removeItem('Stain Removal', 499)">Remove Item</button>
+                </li>
+                <li>
+                    <img src="leather-cleaning-icon.png" alt="Leather & Suede Cleaning">
+                    <span>Leather & Suede Cleaning</span> - ₹999.00
+                    <button onclick="addItem('Leather & Suede Cleaning', 999)">Add Item</button>
+                    <button onclick="removeItem('Leather & Suede Cleaning', 999)">Remove Item</button>
+                </li>
+                <li>
+                    <img src="wedding-dress-cleaning-icon.png" alt="Wedding Dress Cleaning">
+                    <span>Wedding Dress Cleaning</span> - ₹2800.00
+                    <button onclick="addItem('Wedding Dress Cleaning', 2800)">Add Item</button>
+                    <button onclick="removeItem('Wedding Dress Cleaning', 2800)">Remove Item</button>
+                </li>
+            </ul>
+           
+        </div>
+        <div class="right">
+            <div class="cart">
+                <h2>Cart</h2>
+                <div id="cart-items"></div>
+                <p>Total Amount: Rs <span id="total-amount">0</span></p>
+            </div>
+            <div class="book-now">
+                <h2>Book Now</h2>
+                <form id="booking-form">
+                    <input type="text" name="full-name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="tel" name="phone" placeholder="Phone Number" required>
+                    <button type="submit">Book Now</button>
+                </form>
+                <p id="booking-message"></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="quality-description">
+        <h2>Why Choose Us?</h2>
+        <ul>
+            <li>Premium Services</li>
+            <li>Quick Support</li>
+            <li>Timely Delivery</li>
+            <li>Affordable Prices</li>
+        </ul>
+    </section>
+
+    <section class="newsletter">
+        <h2>Subscribe to Our Newsletter</h2>
+        <form id="newsletter-form">
+            <input type="text" name="full-name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="logo.png" alt="Laundry Wallah / Laundry Mart">
+            </div>
+            <div class="footer-links">
+                <a href="#">About Us</a>
+                <a href="#">FAQs</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <div class="footer-contact">
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="footer-social">
+                <a href="#"><img src="facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="instagram.png" alt="Instagram"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        emailjs.init('YOUR_EMAILJS_USER_ID');
+    </script>
+</body>
+</html>

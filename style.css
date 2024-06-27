@@ -1,0 +1,340 @@
+@font-face {
+    font-family: neu;
+    src: url(./NeueHaasDisplayMediu.ttf);
+}
+
+@font-face {
+    font-family: neu;
+    font-weight: 100;
+    src: url(./NeueHaasDisplayLight.ttf);
+}
+
+@font-face {
+    font-family: neu;
+    font-weight: 200;
+    src: url(./NeueHaasDisplayRoman.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: neu;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    /* background-color: #000; */
+    position: relative;
+    z-index: 10;
+}
+
+#page1 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    position: relative;
+    padding: 0 2vw;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    
+}
+
+.navbar .navbar-brand img {
+    max-height: 30px; /* Adjust the height of the logo */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    text-align: center;
+    margin-top: 50px;
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #333; /* Initial color */
+    animation: glow 2s ease-in-out infinite alternate; /* Animation */
+}
+
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        color: #A7E6FF; /* Initial color */
+        text-shadow: none; /* Initial shadow */
+    }
+    50% {
+        color: #3ABEF9; /* Midway color change */
+        text-shadow: 0 0 1px #050C9C, 0 0 3px #050C9C; /* Glowing effect */
+    }
+    100%{
+        transform: translateX(0);
+    color: #3572EF; /* Second midway color */
+    text-shadow: 0 0 4px #050C9C, 0 0 6px #050C9C;  /* Stronger glowing effect */
+}
+}
+
+header h1 {
+    animation: slideIn 10s forwards; /* Animation duration and retain final state */
+    white-space: nowrap; /* Prevent line break */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.user-name {
+    color: white;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+header {
+    background: #f4f4f4;
+    text-align: center;
+    padding: 20px;
+}
+
+section {
+    padding: 20px;
+    margin: 10px;
+}
+
+.services, .price-list, .booking-services, .quality-description, .newsletter {
+    background: #e2e2e2;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.services ul, .price-list table, .quality-description ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.services li, .quality-description li {
+    margin: 5px 0;
+}
+
+.price-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.price-list th, .price-list td {
+    border: 1px solid #000;
+    padding: 8px;
+    text-align: left;
+}
+
+.booking-services {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.left, .right {
+    flex: 1;
+    padding: 20px;
+}
+
+.service-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cart, .book-now {
+    margin-bottom: 20px;
+}
+
+.book-now form, .newsletter form {
+    display: flex;
+    flex-direction: column;
+}
+
+.book-now input, .newsletter input {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.book-now button, .newsletter button {
+    padding: 10px;
+    background: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+footer {
+    background: #f4f4f4;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 50px;
+}
+
+.footer-links, .footer-contact, .footer-social {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links a, .footer-contact a {
+    margin: 5px 0;
+    color: #333;
+    text-decoration: none;
+}
+
+.footer-social a img {
+    width: 30px;
+    margin: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .nav-active {
+        display: flex;
+    }
+
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .toggle .line2 {
+        opacity: 0;
+    }
+
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .footer-container {
+        flex-direction: column;
+    }
+}
+#loader{
+    height: 100%;
+    width: 100%;
+    background-color: #060229;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    transition: all ease 0.7s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#loader h1{
+    font-size: 4vw;
+    color: transparent;
+    background: linear-gradient(to right,#A7E6FF,#3572EF);
+    -webkit-background-clip: text;
+    position: absolute;
+    opacity: 0;
+    animation-name: load;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+}
+#loader h1:nth-child(2){
+    animation-delay: 2s;
+}
+#loader h1:nth-child(3){
+    animation-delay: 3s;
+}
+
+@keyframes load {
+    0%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 0.5;
+    }
+    80%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@media (max-width:600px) {
+    #loader h1{
+        font-size: 9vw;
+      
+    }
+}
